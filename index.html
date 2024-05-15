@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="boxbox">
+        <p class="beceaa"></p>
+        <p class="openopen">O P E N</p>
+        <div class="leftdoor"></div>
+        <div class="rightdoor"></div>
+        </div>
+        <style>
+    .beceaa{
+        background-image: url("download.jpeg");
+        background-size: 90%;
+            height: 100%;
+            width: 75% !important;
+        
+        }
+        .boxbox{
+        position: fixed;
+        top:0;
+        width:100%;
+        height:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: linear-gradient(to bottom, white, #ccc) !important;
+        }
+        .beceaa:first-line{
+        font-size: 40px;
+        line-height: 50px;
+        font-weight: bold;
+        color: #662929;
+        }
+        .bece{
+        width: 75%;
+        color: #000;
+        }
+        .leftdoor,.rightdoor {
+        position: fixed;
+        top:0;
+        width: 50%;
+        height: 100%;
+        background: #671200;
+        }
+        .leftdoor {
+        left:0;
+        transform-origin: left;
+        animation: movel 4s forwards ; 
+        animation-delay: 1s;
+        background-image: url("doorr.jpg") ;
+        background-size: 100%;
+        }
+        .rightdoor {
+        right:0;
+        transform-origin: right;
+        animation: moveR 4s forwards ; 
+        animation-delay: 1s;
+        background-image: url("doorl.jpg");
+        background-size: 100%;
+        }
+        @keyframes movel {  
+        100% { transform: scaleX(0) perspective(50px) rotateY(5deg); ;   }
+        }
+        @keyframes moveR {  
+        100% { transform: scaleX(0) perspective(50px) rotateY(-5deg)  ; }
+        }
+        .openopen{
+            
+            position: fixed;
+            width:100%;
+            font-size: 4.5rem !important;
+            color: #fff;
+            animation: move_o 5s forwards; 
+          
+        }
+        @keyframes move_o {  
+        100% { opacity:0; }
+        }
+
+        [data-test="glide-app-bar"] {display: none}
+
+        #tabBar{ display:none; }
+     
+        [data-test="app-button-view"] 
+        /* { -webkit-transform : rotate(90deg); */
+       /{ height: 42px;
+        position: fixed;
+        right:-25px;
+        bottom: 10%;
+        background : #000 !important;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+        filter: none;
+        }
+        @media only screen and (max-width: 700px) {
+        .boxbox,.leftdoor,.rightdoor{
+        height:100vh;
+        
+        }/*media only screen */
+        }
